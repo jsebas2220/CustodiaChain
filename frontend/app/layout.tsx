@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { LedgerProvider } from "@/components/LedgerProvider";
 import Nav from "@/components/Nav";
 
+import "./globals.css";
+
 export const metadata: Metadata = {
   title: "CustodiaChain",
-  description: "Cadena de custodia verificable de evidencia digital (prototipo de interfaz)",
+  description: "Cadena de custodia verificable de evidencia digital (prototipo de interfaz)"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

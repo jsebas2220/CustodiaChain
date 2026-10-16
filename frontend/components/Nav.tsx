@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ACTORES, Actor } from "@/lib/ledger";
 import { useLedger } from "./LedgerProvider";
+
+import logo from "../app/public/assets/images/logo.png"
 
 const LINKS = [
   { href: "/", texto: "Inicio" },
@@ -20,7 +23,13 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <Link href="/" className="marca">
-          CustodiaChain
+          <Image
+            src={logo}
+            className="logo"
+            width={80}
+            height={70}
+            alt="Logo Custodiachain"
+          />
         </Link>
         <nav aria-label="Principal">
           {LINKS.map((l) => (
@@ -35,7 +44,10 @@ export default function Nav() {
         </nav>
         <label className="actor">
           <span>Actuando como</span>
-          <select value={actor} onChange={(e) => setActor(e.target.value as Actor)}>
+          <select
+            value={actor}
+            onChange={(e) => setActor(e.target.value as Actor)}
+          >
             {ACTORES.map((a) => (
               <option key={a}>{a}</option>
             ))}
