@@ -19,4 +19,4 @@ npm install
 npm run dev
 ```
 
-Abre http://localhost:3000 en el navegador. En la página de inicio pulsa **Cargar datos de ejemplo** para ver el flujo completo.
+Abre [custodiochain](https://custodia-chain.vercel.app/) en el navegador. En la página de inicio pulsa **Cargar datos de ejemplo** para ver el flujo completo.
